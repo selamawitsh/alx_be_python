@@ -10,7 +10,8 @@ def display_menu():
 # module-level list so automated checks can detect it
 shopping_list = []
 
-def main():
+def run():
+    """Run the shopping list manager loop (called from main.py)."""
     while True:
         display_menu()
         # Read choice as a number (int). Handle non-numeric input gracefully.
@@ -50,6 +51,3 @@ def main():
 
         else:
             print("Invalid choice. Please try again.")
-
-if __name__ == "__main__":
-    main()
