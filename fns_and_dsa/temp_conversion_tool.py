@@ -8,8 +8,8 @@ def convert_to_celsius(fahrenheit):
 def convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + FAHRENHEIT_FREEZING_POINT
 
-def main():
-    # User interaction (kept inside main so imports won't trigger prompts)
+def run():
+    # User interaction (kept inside run so imports won't trigger prompts)
     temp_input = input("Enter the temperature to convert: ")
     # If not numeric, raise ValueError with the exact required message
     try:
@@ -26,8 +26,7 @@ def main():
         converted = convert_to_celsius(temperature)
         print(f"{temperature}°F is {converted}°C")
     else:
-        # invalid unit — raise an error so the checker can detect it
         raise ValueError("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
 
 if __name__ == "__main__":
-    main()
+    run()
